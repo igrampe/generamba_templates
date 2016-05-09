@@ -2,7 +2,7 @@
 name: "findsquad_viper_template"
 summary: "VIPER module template by igrampe"
 author: "Semyon Belokovsky"
-version: "1.0"
+version: "0.1"
 license: "MIT"
 
 # The declarations for code files
