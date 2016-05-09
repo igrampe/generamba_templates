@@ -3,53 +3,58 @@
 #import "{{ prefix }}{{ module_info.name }}Assembly.h"
 
 #import "{{ prefix }}{{ module_info.name }}ViewController.h"
-#import "{{ prefix }}{{ module_info.name }}Interactor.h"
 #import "{{ prefix }}{{ module_info.name }}Presenter.h"
+#import "{{ prefix }}{{ module_info.name }}Interactor.h"
 #import "{{ prefix }}{{ module_info.name }}Router.h"
 
 @implementation {{ prefix }}{{ module_info.name }}Assembly
 
-- ({{ prefix }}{{ module_info.name }}ViewController *)view
+- ({{ prefix }}{{ module_info.name }}Presenter *)presenter
+{
+    return [self presenter{{ prefix }}{{ module_info.name }}];
+}
+
+- ({{ prefix }}{{ module_info.name }}ViewController *)view{{ prefix }}{{ module_info.name }}
 {
     return [TyphoonDefinition withClass:[{{ prefix }}{{ module_info.name }}ViewController class]
                           configuration:^(TyphoonDefinition *definition)
     {
         [definition injectProperty:@selector(output)
-                              with:[self presenter]];
+                              with:[self presenter{{ prefix }}{{ module_info.name }}]];
     }];
 }
 
-- ({{ prefix }}{{ module_info.name }}Interactor *)interactor
+- ({{ prefix }}{{ module_info.name }}Interactor *)interactor{{ prefix }}{{ module_info.name }}
 {
     return [TyphoonDefinition withClass:[{{ prefix }}{{ module_info.name }}Interactor class]
                           configuration:
     ^(TyphoonDefinition *definition)
     {
         [definition injectProperty:@selector(output)
-                              with:[self presenter]];
+                              with:[self presenter{{ prefix }}{{ module_info.name }}]];
     }];
 }
 
-- ({{ prefix }}{{ module_info.name }}Presenter *)presenter
+- ({{ prefix }}{{ module_info.name }}Presenter *)presenter{{ prefix }}{{ module_info.name }}
 {
     return [TyphoonDefinition withClass:[{{ prefix }}{{ module_info.name }}Presenter class]
                           configuration:^(TyphoonDefinition *definition)
     {
         [definition injectProperty:@selector(view)
-                              with:[self view]];
+                              with:[self view{{ prefix }}{{ module_info.name }}]];
         [definition injectProperty:@selector(interactor)
-                              with:[self interactor]];
+                              with:[self interactor{{ prefix }}{{ module_info.name }}]];
         [definition injectProperty:@selector(router)
-                              with:[self router]];
+                              with:[self router{{ prefix }}{{ module_info.name }}]];
     }];
 }
 
-- ({{ prefix }}{{ module_info.name }}Router *)router
+- ({{ prefix }}{{ module_info.name }}Router *)router{{ prefix }}{{ module_info.name }}
 {
     return [TyphoonDefinition withClass:[{{ prefix }}{{ module_info.name }}Router class]
                           configuration:^(TyphoonDefinition *definition)
     {
-        
+
     }];
 }
 

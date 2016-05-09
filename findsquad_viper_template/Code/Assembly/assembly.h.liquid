@@ -2,6 +2,10 @@
 
 #import "FSModuleAssemblyBase.h"
 
+@class {{ prefix }}{{ module_info.name }}Presenter;
+
 @interface {{ prefix }}{{ module_info.name }}Assembly : FSModuleAssemblyBase
+
+- ({{ prefix }}{{ module_info.name }}Presenter *)presenter;
 
 @end
