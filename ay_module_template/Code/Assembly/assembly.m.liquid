@@ -1,0 +1,29 @@
+{% include 'header' %}
+
+#import "{{ prefix }}{{ module_info.name }}Assembly.h"
+#import "{{ prefix }}{{ module_info.name }}ViewController.h"
+#import "{{ prefix }}{{ module_info.name }}Wireframe.h"
+
+@implementation {{ prefix }}{{ module_info.name }}Assembly
+
+- ({{ prefix }}{{ module_info.name }}ViewController *)viewMovie
+{
+    return [TyphoonDefinition withClass:[{{ prefix }}{{ module_info.name }}ViewController class]
+                          configuration:^(TyphoonDefinition *definition)
+    {
+        [definition injectProperty:@selector(output)
+                              with:[self wireframeMovie]];
+    }];
+}
+
+- ({{ prefix }}{{ module_info.name }}Wireframe *)wireframeMovie
+{
+    return [TyphoonDefinition withClass:[{{ prefix }}{{ module_info.name }}Wireframe class]
+                          configuration:^(TyphoonDefinition *definition)
+    {
+        [definition injectProperty:@selector(view)
+                              with:[self viewMovie]];
+    }];
+}
+
+@end

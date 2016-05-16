@@ -1,0 +1,11 @@
+{% include 'header' %}
+
+#import <Typhoon/Typhoon.h>
+
+@class {{ prefix }}{{ module_info.name }}Wireframe;
+
+@interface {{ prefix }}{{ module_info.name }}Assembly : TyphoonAssembly
+
+- ({{ prefix }}{{ module_info.name }}Wireframe *)wireframe{{ module_info.name }};
+
+@end

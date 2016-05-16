@@ -1,0 +1,13 @@
+{% include 'header' %}
+
+#import <Foundation/Foundation.h>
+
+#import "{{ prefix }}{{ module_info.name }}ViewOutput.h"
+
+@protocol {{ prefix }}{{ module_info.name }}ViewInput;
+
+@interface {{ prefix }}{{ module_info.name }}Wireframe : NSObject <{{ prefix }}{{ module_info.name }}ViewOutput>
+
+@property (nonatomic, strong) UIViewController<{{ prefix }}{{ module_info.name }}ViewInput> *view;
+
+@end
