@@ -6,12 +6,6 @@
 //  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
 //
 
-protocol {{ module_info.name }}ViewInput: class {
-
-    /**
-        @author {{ developer.name }}
-        Setup initial state of the view
-    */
-
+protocol {{ prefix }}{{ module_info.name }}ViewInput: class {
     func setupInitialState()
 }

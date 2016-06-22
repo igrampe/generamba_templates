@@ -8,14 +8,14 @@
 
 import UIKit
 
-class {{ module_info.name }}ModuleInitializer: NSObject {
+class {{ prefix }}{{ module_info.name }}ModuleInitializer: NSObject {
 
     //Connect with object on storyboard
-    @IBOutlet weak var {{ module_info.name | downcase }}ViewController: {{ module_info.name }}ViewController!
+    @IBOutlet weak var {{ module_info.name | downcase }}ViewController: {{ prefix }}{{ module_info.name }}ViewController!
 
     override func awakeFromNib() {
 
-        let configurator = {{ module_info.name }}ModuleConfigurator()
+        let configurator = {{ prefix }}{{ module_info.name }}ModuleConfigurator()
         configurator.configureModuleForViewInput({{ module_info.name | downcase }}ViewController)
     }
 

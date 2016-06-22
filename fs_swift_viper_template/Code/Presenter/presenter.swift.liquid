@@ -6,11 +6,11 @@
 //  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
 //
 
-class {{ module_info.name }}Presenter: {{ module_info.name }}ModuleInput, {{ module_info.name }}ViewOutput, {{ module_info.name }}InteractorOutput {
+class {{ prefix }}{{ module_info.name }}Presenter: {{ prefix }}{{ module_info.name }}ModuleInput, {{ prefix }}{{ module_info.name }}ViewOutput, {{ prefix }}{{ module_info.name }}InteractorOutput {
 
-    weak var view: {{ module_info.name }}ViewInput!
-    var interactor: {{ module_info.name }}InteractorInput!
-    var router: {{ module_info.name }}RouterInput!
+    weak var view: {{ prefix }}{{ module_info.name }}ViewInput!
+    var interactor: {{ prefix }}{{ module_info.name }}InteractorInput!
+    var router: {{ prefix }}{{ module_info.name }}RouterInput!
 
     func viewIsReady() {
 
