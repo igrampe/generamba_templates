@@ -5,4 +5,6 @@ import Foundation
 protocol {{ prefix }}{{ module_info.name }}RouterInput {
 
 	weak var transitionHandler: APLTransitionHandler? { get set }
+	weak var moduleInput: {{ prefix }}{{ module_info.name }}ModuleInput? { get set }
+	
 }
