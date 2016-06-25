@@ -20,6 +20,7 @@ class {{ prefix }}{{ module_info.name }}ModuleConfigurator {
     private func configure(viewController: {{ prefix }}{{ module_info.name }}ViewController) {
 
         let router = {{ prefix }}{{ module_info.name }}Router()
+        router.transitionHandler = viewController
 
         let presenter = {{ prefix }}{{ module_info.name }}Presenter()
         presenter.view = viewController
