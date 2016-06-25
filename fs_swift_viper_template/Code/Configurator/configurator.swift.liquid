@@ -1,8 +1,9 @@
 {% include 'header' %}
 
 import UIKit
+import APLViperStackSwift
 
-class {{ prefix }}{{ module_info.name }}ModuleConfigurator {
+class {{ prefix }}{{ module_info.name }}ModuleConfigurator: APLModuleConfigurator {
 
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
 
@@ -27,5 +28,4 @@ class {{ prefix }}{{ module_info.name }}ModuleConfigurator {
         viewController.output = presenter
         router.transitionHandler?.moduleInput = presenter
     }
-
 }
