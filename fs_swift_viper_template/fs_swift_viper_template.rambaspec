@@ -49,5 +49,5 @@ test_files:
 - {name: Router/RouterTests.swift, path: Tests/Router/router_tests.swift.liquid}
 
 # Template dependencies
-dependencies:
-- APLViperStackSwift
+#dependencies:
+#- APLViperStackSwift
