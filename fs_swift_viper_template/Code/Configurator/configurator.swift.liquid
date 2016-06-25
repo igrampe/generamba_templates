@@ -19,13 +19,13 @@ class {{ prefix }}{{ module_info.name }}ModuleConfigurator {
         let presenter = {{ prefix }}{{ module_info.name }}Presenter()
         presenter.view = viewController
         presenter.router = router
-        router.moduleInput = presenter
 
         let interactor = {{ prefix }}{{ module_info.name }}Interactor()
         interactor.output = presenter
 
         presenter.interactor = interactor
         viewController.output = presenter
+        router.transitionHandler?.moduleInput = presenter
     }
 
 }
