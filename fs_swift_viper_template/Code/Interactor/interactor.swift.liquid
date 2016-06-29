@@ -1,7 +1,13 @@
 {% include 'header' %}
 
-class {{ prefix }}{{ module_info.name }}Interactor: {{ prefix }}{{ module_info.name }}InteractorInput {
+class {{ prefix }}{{ module_info.name }}Interactor {
 
     weak var output: {{ prefix }}{{ module_info.name }}InteractorOutput!
 
+}
+
+// MARK: - {{ prefix }}{{ module_info.name }}InteractorInput
+
+extension {{ prefix }}{{ module_info.name }}Interactor: {{ prefix }}{{ module_info.name }}InteractorInput {
+	
 }

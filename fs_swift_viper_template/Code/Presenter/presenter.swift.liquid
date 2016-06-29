@@ -2,7 +2,7 @@
 
 import APLViperStackSwift
 
-class {{ prefix }}{{ module_info.name }}Presenter: {{ prefix }}{{ module_info.name }}ModuleInput, {{ prefix }}{{ module_info.name }}ViewOutput, {{ prefix }}{{ module_info.name }}InteractorOutput {
+class {{ prefix }}{{ module_info.name }}Presenter {
 
 	weak var moduleOutput: APLModuleOutput?
 
@@ -13,4 +13,18 @@ class {{ prefix }}{{ module_info.name }}Presenter: {{ prefix }}{{ module_info.na
     func viewIsReady() {
 
     }
+}
+
+// MARK: - {{ prefix }}{{ module_info.name }}ModuleInput
+
+extension {{ prefix }}{{ module_info.name }}Presenter: {{ prefix }}{{ module_info.name }}ModuleInput {
+	
+}
+
+extension {{ prefix }}{{ module_info.name }}Presenter: {{ prefix }}{{ module_info.name }}ViewOutput {
+	
+}
+
+extension {{ prefix }}{{ module_info.name }}Presenter: {{ prefix }}{{ module_info.name }}InteractorOutput {
+	
 }
