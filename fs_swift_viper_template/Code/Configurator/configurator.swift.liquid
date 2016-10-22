@@ -8,7 +8,7 @@ class {{ prefix }}{{ module_info.name }}ModuleConfigurator {
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
 
         if let viewController = viewInput as? {{ prefix }}{{ module_info.name }}ViewController {
-            configure(viewController)
+            configure(viewController: viewController)
         }
     }
 

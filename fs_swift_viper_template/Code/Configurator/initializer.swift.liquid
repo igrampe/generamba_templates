@@ -10,7 +10,7 @@ class {{ prefix }}{{ module_info.name }}ModuleInitializer: NSObject {
     override func awakeFromNib() {
 
         let configurator = {{ prefix }}{{ module_info.name }}ModuleConfigurator()
-        configurator.configureModuleForViewInput({{ module_info.name | downcase }}ViewController)
+        configurator.configureModuleForViewInput(viewInput: {{ module_info.name | downcase }}ViewController)
     }
 
 }
