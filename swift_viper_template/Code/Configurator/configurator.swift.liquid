@@ -1,0 +1,31 @@
+{% include 'header' %}
+
+import UIKit
+import APLViperStackSwift
+
+class {{ prefix }}{{ module_info.name }}ModuleConfigurator {
+
+    func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
+
+        if let viewController = viewInput as? {{ prefix }}{{ module_info.name }}ViewController {
+            configure(viewController: viewController)
+        }
+    }
+
+    private func configure(viewController: {{ prefix }}{{ module_info.name }}ViewController) {
+
+        let router = {{ prefix }}{{ module_info.name }}Router()
+        router.transitionHandler = viewController
+
+        let presenter = {{ prefix }}{{ module_info.name }}Presenter()
+        presenter.view = viewController
+        presenter.router = router
+
+        let interactor = {{ prefix }}{{ module_info.name }}Interactor()
+        interactor.output = presenter
+
+        presenter.interactor = interactor
+        viewController.output = presenter
+        router.transitionHandler?.moduleInput = presenter
+    }
+}

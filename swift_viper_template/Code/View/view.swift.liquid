@@ -1,0 +1,16 @@
+{% include 'header' %}
+
+import UIKit
+import APLViperStackSwift
+
+class {{ prefix }}{{ module_info.name }}ViewController: APLModuleViewController {
+
+    var output: {{ prefix }}{{ module_info.name }}ViewOutput!
+
+    // MARK: Life cycle
+}
+
+// MARK: - {{ prefix }}{{module_info.name}}ViewInput
+
+extension {{ prefix }}{{ module_info.name }}ViewController: {{ prefix }}{{module_info.name}}ViewInput {
+}
