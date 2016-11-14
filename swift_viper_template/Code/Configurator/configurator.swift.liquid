@@ -7,25 +7,25 @@ class {{ prefix }}{{ module_info.name }}ModuleConfigurator {
 
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
 
-        if let viewController = viewInput as? {{ prefix }}{{ module_info.name }}ViewController {
-            configure(viewController: viewController)
+        if let view = viewInput as? {{ prefix }}{{ module_info.name }}View {
+            configure(view: view)
         }
     }
 
-    private func configure(viewController: {{ prefix }}{{ module_info.name }}ViewController) {
+    private func configure(view: {{ prefix }}{{ module_info.name }}View) {
 
         let router = {{ prefix }}{{ module_info.name }}Router()
-        router.transitionHandler = viewController
+        router.transitionHandler = view
 
         let presenter = {{ prefix }}{{ module_info.name }}Presenter()
-        presenter.view = viewController
+        presenter.view = view
         presenter.router = router
 
         let interactor = {{ prefix }}{{ module_info.name }}Interactor()
         interactor.output = presenter
 
         presenter.interactor = interactor
-        viewController.output = presenter
+        view.output = presenter
         router.transitionHandler?.moduleInput = presenter
     }
 }
