@@ -1,0 +1,10 @@
+{% include 'header' %}
+
+#import <UIKit/UIKit.h>
+#import "{{ prefix }}{{ module_info.name }}ViewOutput.h"
+
+@interface SERootView : UIViewController
+
+@property (nonatomic, weak) id<{{ prefix }}{{ module_info.name }}ViewOutput> output;
+
+@end

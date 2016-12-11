@@ -1,0 +1,10 @@
+{% include 'header' %}
+
+#import <Foundation/Foundation.h>
+#import "{{ prefix }}{{ module_info.name }}InteractorOutput.h"
+
+@interface {{ prefix }}{{ module_info.name }}Interactor : NSObject
+
+@property (nonatomic, weak) id<{{ prefix }}{{ module_info.name }}InteractorOutput> output;
+
+@end

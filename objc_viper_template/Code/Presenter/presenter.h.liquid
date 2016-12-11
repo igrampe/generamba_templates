@@ -1,0 +1,14 @@
+{% include 'header' %}
+
+#import <Foundation/Foundation.h>
+#import "{{ prefix }}{{ module_info.name }}RouterInput.h"
+#import "{{ prefix }}{{ module_info.name }}ViewInput.h"
+#import "{{ prefix }}{{ module_info.name }}InteractorInput.h"
+
+@interface {{ prefix }}{{ module_info.name }}Presenter : NSObject
+
+@property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}RouterInput> router;
+@property (nonatomic, weak) id<{{ prefix }}{{ module_info.name }}ViewInput> view;
+@property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}InteractorInput> interactor;
+
+@end

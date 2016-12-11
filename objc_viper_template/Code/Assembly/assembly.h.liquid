@@ -1,0 +1,9 @@
+{% include 'header' %}
+
+#import <Typhoon/Typhoon.h>
+
+@interface {{ prefix }}{{ module_info.name }}Assembly : TyphoonAssembly
+
+- (UIViewController *)view;
+
+@end

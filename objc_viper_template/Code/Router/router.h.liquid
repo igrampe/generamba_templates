@@ -1,0 +1,11 @@
+{% include 'header' %}
+
+#import <Foundation/Foundation.h>
+#import <APLViperStack/TransitionHandler/APLTransitionHandler.h>
+#import "{{ prefix }}{{ module_info.name }}RouterInput.h"
+
+@interface {{ prefix }}{{ module_info.name }}Router : NSObject <{{ prefix }}{{ module_info.name }}RouterInput>
+
+@property (nonatomic, weak) id<APLTransitionHandler> transitionHandler;
+
+@end

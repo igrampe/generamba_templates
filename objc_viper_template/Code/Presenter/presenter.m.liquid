@@ -1,0 +1,13 @@
+{% include 'header' %}
+
+#import "{{ prefix }}{{ module_info.name }}Presenter.h"
+#import "{{ prefix }}{{ module_info.name }}ViewOutput.h"
+#import "{{ prefix }}{{ module_info.name }}InteractorOutput.h"
+
+@interface {{ prefix }}{{ module_info.name }}Presenter () <{{ prefix }}{{ module_info.name }}ViewOutput, {{ prefix }}{{ module_info.name }}InteractorOutput>
+
+@end
+
+@implementation {{ prefix }}{{ module_info.name }}Presenter
+
+@end
