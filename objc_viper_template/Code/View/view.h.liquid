@@ -1,10 +1,10 @@
 {% include 'header' %}
 
-#import <UIKit/UIKit.h>
+#import "SEViewController.h"
 
 @protocol {{ prefix }}{{ module_info.name }}ViewOutput.h;
 
-@interface {{ prefix }}{{ module_info.name }}View : UIViewController
+@interface {{ prefix }}{{ module_info.name }}View : SEViewController
 
 @property (nonatomic, weak) id<{{ prefix }}{{ module_info.name }}ViewOutput> output;
 
