@@ -1,7 +1,8 @@
 {% include 'header' %}
 
 #import <UIKit/UIKit.h>
-#import "{{ prefix }}{{ module_info.name }}ViewOutput.h"
+
+@protocol {{ prefix }}{{ module_info.name }}ViewOutput.h;
 
 @interface {{ prefix }}{{ module_info.name }}View : UIViewController
 

@@ -2,9 +2,9 @@
 
 #import "{{ prefix }}{{ module_info.name }}Assembly.h"
 #import "{{ prefix }}{{ module_info.name }}View.h"
+#import "{{ prefix }}{{ module_info.name }}Interactor.h"
 #import "{{ prefix }}{{ module_info.name }}Presenter.h"
 #import "{{ prefix }}{{ module_info.name }}Router.h"
-#import "{{ prefix }}{{ module_info.name }}Interactor.h"
 
 @implementation {{ prefix }}{{ module_info.name }}Assembly
 
@@ -46,10 +46,6 @@
                 [definition injectProperty:@selector(output)
                                       with:[self presenter{{ module_info.name }}]];
             }];
-}
-
-- (UIViewController *)view {
-    return [self view{{ module_info.name }}];
 }
 
 @end

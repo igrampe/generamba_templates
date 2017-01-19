@@ -1,9 +1,10 @@
 {% include 'header' %}
 
 #import <Foundation/Foundation.h>
-#import "{{ prefix }}{{ module_info.name }}RouterInput.h"
-#import "{{ prefix }}{{ module_info.name }}ViewInput.h"
-#import "{{ prefix }}{{ module_info.name }}InteractorInput.h"
+
+@protocol {{ prefix }}{{ module_info.name }}RouterInput;
+@protocol {{ prefix }}{{ module_info.name }}ViewInput;
+@protocol {{ prefix }}{{ module_info.name }}InteractorInput;
 
 @interface {{ prefix }}{{ module_info.name }}Presenter : NSObject
 
