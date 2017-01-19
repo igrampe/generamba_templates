@@ -41,3 +41,4 @@ test_files:
 # Template dependencies
 #dependencies:
 - APLViperStack
+- Typhoon
