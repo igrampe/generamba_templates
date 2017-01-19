@@ -40,4 +40,4 @@ test_files:
 
 # Template dependencies
 #dependencies:
-#- APLViperStack
+- APLViperStack
