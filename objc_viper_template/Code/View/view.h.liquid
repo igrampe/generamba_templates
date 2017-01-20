@@ -6,6 +6,6 @@
 
 @interface {{ prefix }}{{ module_info.name }}View : SEViewController
 
-@property (nonatomic, weak) id<{{ prefix }}{{ module_info.name }}ViewOutput> output;
+@property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}ViewOutput> output;
 
 @end
