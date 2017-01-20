@@ -35,10 +35,7 @@ code_files:
 - {name: Assembly/Assembly.h, path: Code/Assembly/assembly.h.liquid}
 - {name: Assembly/Assembly.m, path: Code/Assembly/assembly.m.liquid}
 
-# The declarations for test files
-test_files:
-
 # Template dependencies
-#dependencies:
+dependencies:
 - APLViperStack
 - Typhoon
