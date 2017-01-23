@@ -1,8 +1,8 @@
 {% include 'header' %}
 
-#import <Typhoon/Typhoon.h>
+#import "{{ prefix }}ModuleAssembly.h"
 
-@interface {{ prefix }}{{ module_info.name }}Assembly : TyphoonAssembly
+@interface {{ prefix }}{{ module_info.name }}Assembly : {{ prefix }}ModuleAssembly
 
 - (UIViewController *)view{{ module_info.name }};
 
