@@ -3,11 +3,28 @@
 #import "{{ prefix }}{{ module_info.name }}View.h"
 #import "{{ prefix }}{{ module_info.name }}ViewOutput.h"
 #import "{{ prefix }}{{ module_info.name }}ViewInput.h"
+#import "{{ prefix }}ViewController+Private.h"
 
 @interface {{ prefix }}{{ module_info.name }}View () <{{ prefix }}{{ module_info.name }}ViewInput>
 
 @end
 
 @implementation {{ prefix }}{{ module_info.name }}View
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+}
+
+- (void)setupView {
+    [super setupView];
+}
+
+- (void)updateViewConstraints {
+    [super updateViewConstraints];
+    if (self.didSetupConstraints) {
+        return;
+    }
+    self.didSetupConstraints = YES;
+}
 
 @end

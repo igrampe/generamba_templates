@@ -1,7 +1,7 @@
 {% include 'header' %}
 
-#import <Foundation/Foundation.h>
+#import "{{ prefix }}ViewInput.h"
 
-@protocol {{ prefix }}{{ module_info.name }}ViewInput <NSObject>
+@protocol {{ prefix }}{{ module_info.name }}ViewInput <{{ prefix }}ViewInput>
 
 @end

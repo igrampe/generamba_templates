@@ -7,6 +7,7 @@
 #import "{{ prefix }}{{ module_info.name }}InteractorInput.h"
 #import "{{ prefix }}{{ module_info.name }}InteractorOutput.h"
 #import "{{ prefix }}{{ module_info.name }}ModuleInput.h"
+#import "{{ prefix }}{{ module_info.name }}ModuleOutput.h"
 
 @interface {{ prefix }}{{ module_info.name }}Presenter () <{{ prefix }}{{ module_info.name }}ViewOutput, {{ prefix }}{{ module_info.name }}InteractorOutput, {{ prefix }}{{ module_info.name }}ModuleInput>
 
@@ -15,5 +16,11 @@
 @implementation {{ prefix }}{{ module_info.name }}Presenter
 
 @synthesize moduleOutput;
+
+#pragma mark - {{ prefix }}{{ module_info.name }}ViewOutput
+
+- (void)eventViewDidLoad {
+
+}
 
 @end

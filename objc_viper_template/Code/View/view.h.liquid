@@ -1,10 +1,10 @@
 {% include 'header' %}
 
-#import "{{ prefix }}ViewController.h"
+#import "{{ prefix }}ModuleView.h"
 
 @protocol {{ prefix }}{{ module_info.name }}ViewOutput;
 
-@interface {{ prefix }}{{ module_info.name }}View : {{ prefix }}ViewController
+@interface {{ prefix }}{{ module_info.name }}View : {{ prefix }}ModuleView
 
 @property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}ViewOutput> output;
 
