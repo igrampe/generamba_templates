@@ -1,12 +1,8 @@
 {% include 'header' %}
 
-import APLViperStackSwift
+import Foundation
+import SBViperStackSwift
 
-class {{ prefix }}{{ module_info.name }}Router {
-	
-	var transitionHandler: APLTransitionHandler?
-}
-
-extension {{ prefix }}{{ module_info.name }}Router: {{ prefix }}{{ module_info.name }}RouterInput {
-	
+class {{ prefix }}{{ module_info.name }}Router: ModuleRouter, {{ prefix }}{{ module_info.name }}RouterInput {
+        
 }

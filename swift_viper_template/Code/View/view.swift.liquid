@@ -1,16 +1,9 @@
 {% include 'header' %}
 
 import UIKit
-import APLViperStackSwift
+import SBViperStackSwift
 
-class {{ prefix }}{{ module_info.name }}View: APLModuleViewController {
+class {{ prefix }}{{ module_info.name }}View: ModuleView, {{ prefix }}{{ module_info.name }}ViewInput {
 
-    var output: {{ prefix }}{{ module_info.name }}ViewOutput!
-
-    // MARK: Life cycle
-}
-
-// MARK: - {{ prefix }}{{module_info.name}}ViewInput
-
-extension {{ prefix }}{{ module_info.name }}View: {{ prefix }}{{module_info.name}}ViewInput {
+    var output: {{ prefix }}{{ module_info.name }}ViewOutput?
 }
