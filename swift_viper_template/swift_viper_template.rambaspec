@@ -31,4 +31,4 @@ code_files:
 
 # Template dependencies
 #dependencies:
-- SBViperStackSwift
+- ViperStackSwift
