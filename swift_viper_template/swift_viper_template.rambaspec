@@ -29,8 +29,6 @@ code_files:
 
 # The declarations for test files
 test_files:
-
-# Configurators tests
 - {name: Tests.swift, path: Tests/tests.swift.liquid}
 
 # Template dependencies
