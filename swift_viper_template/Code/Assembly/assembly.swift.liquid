@@ -39,9 +39,6 @@ public class {{ prefix }}{{ module_info.name }}Assembly: Assembly {
         }
     }
     
-    class var assembler: Assembler {
-        return Assembler([
-            // Add child asseblies
-            ])
-    }
+    // Add child assemblies
+    static var assembler: Assembler = Assembler([])
 }
