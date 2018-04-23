@@ -3,7 +3,13 @@
 import UIKit
 import ViperStackSwift
 
-class {{ prefix }}{{ module_info.name }}View: ModuleView, {{ prefix }}{{ module_info.name }}ViewInput {
+class {{ prefix }}{{ module_info.name }}View: ModuleView {
 
     var output: {{ prefix }}{{ module_info.name }}ViewOutput?
+}
+
+// MARK: - {{ prefix }}{{ module_info.name }}ViewInput
+
+extension {{ prefix }}{{ module_info.name }}View: {{ prefix }}{{ module_info.name }}ViewInput {
+	
 }

@@ -3,6 +3,12 @@
 import Foundation
 import ViperStackSwift
 
-class {{ prefix }}{{ module_info.name }}Router: ModuleRouter, {{ prefix }}{{ module_info.name }}RouterInput {
+class {{ prefix }}{{ module_info.name }}Router: ModuleRouter {
         
+}
+
+// MARK: - {{ prefix }}{{ module_info.name }}RouterInput
+
+extension {{ prefix }}{{ module_info.name }}Router: {{ prefix }}{{ module_info.name }}RouterInput {
+	
 }
