@@ -30,7 +30,3 @@ code_files:
 # The declarations for test files
 test_files:
 - {name: Tests.swift, path: Tests/tests.swift.liquid}
-
-# Template dependencies
-#dependencies:
-- ViperStackSwift
