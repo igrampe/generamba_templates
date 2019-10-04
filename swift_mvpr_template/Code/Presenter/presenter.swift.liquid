@@ -1,7 +1,6 @@
 {% include 'header' %}
 
 import Foundation
-import ViperStackSwift
 
 class {{ prefix }}{{ module_info.name }}Presenter {
     var router: {{ prefix }}{{ module_info.name }}RouterInput?
@@ -17,12 +16,6 @@ extension {{ prefix }}{{ module_info.name }}Presenter: {{ prefix }}{{ module_inf
     func eventViewDidAppear() {}
     func eventViewWillDisappear() {}
     func eventViewDidDisappear() {}
-}
-
-// MARK: - {{ prefix }}{{ module_info.name }}InteractorOutput
-
-extension {{ prefix }}{{ module_info.name }}Presenter: {{ prefix }}{{ module_info.name }}InteractorOutput {
-	
 }
 
 // MARK: - {{ prefix }}{{ module_info.name }}ModuleInput
