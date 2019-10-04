@@ -1,0 +1,38 @@
+{% include 'header' %}
+
+import Foundation
+import Swinject
+
+public class {{ prefix }}{{ module_info.name }}Assembly: Assembly {
+    public func assemble(container: Container) {        
+        container.register({{ prefix }}{{ module_info.name }}Router.self) { (r, view: TransitionHandler) in
+            let router = {{ prefix }}{{ module_info.name }}Router()
+            router.transitionHandler = view
+            if let _ = view as? {{ prefix }}{{ module_info.name }}ViewInput {
+
+            }
+            return router
+        }
+        
+        container.register({{ prefix }}{{ module_info.name }}Presenter.self) { (r, view: {{ prefix }}{{ module_info.name }}ViewInput) in
+            let presenter = {{ prefix }}{{ module_info.name }}Presenter()
+            presenter.view = view
+            return presenter
+        }.initCompleted { (r, presenter) in
+            if let view = presenter.view as? TransitionHandler {
+                presenter.router = r.resolve({{ prefix }}{{ module_info.name }}Router.self, argument: view)
+            }
+        }
+        
+        container.register({{ prefix }}{{ module_info.name }}View.self) { (r) in
+            let view = {{ prefix }}{{ module_info.name }}View()
+            view.output = r.resolve({{ prefix }}{{ module_info.name }}Presenter.self, argument: view as {{ prefix }}{{ module_info.name }}ViewInput)
+            view.moduleInput = r.resolve({{ prefix }}{{ module_info.name }}Presenter.self, argument: view as {{ prefix }}{{ module_info.name }}ViewInput)
+            
+            return view
+        }
+    }
+    
+    // Add child assemblies
+    static var assembler: Assembler = Assembler([])
+}

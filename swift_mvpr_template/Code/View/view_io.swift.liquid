@@ -1,0 +1,15 @@
+{% include 'header' %}
+
+import Foundation
+
+protocol {{ prefix }}{{ module_info.name }}ViewInput: class {
+    
+}
+
+protocol {{ prefix }}{{ module_info.name }}ViewOutput {
+	func eventViewDidLoad()
+    func eventViewWillAppear()
+    func eventViewDidAppear()
+    func eventViewWillDisappear()
+    func eventViewDidDisappear()
+}

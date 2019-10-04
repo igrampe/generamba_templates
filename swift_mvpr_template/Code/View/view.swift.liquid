@@ -1,0 +1,51 @@
+{% include 'header' %}
+
+import UIKit
+import ViperStackSwift
+
+class {{ prefix }}{{ module_info.name }}View: UIViewCOntroller, TransitionHandler {
+    var output: {{ prefix }}{{ module_info.name }}ViewOutput?
+    var moduleInput: ModuleInput?
+
+    // MARK: - {{ prefix }}{{ module_info.name }}View
+
+    internal func setupView() {
+    	
+    }
+}
+
+// MARK: - {{ prefix }}{{ module_info.name }}ViewInput
+
+extension {{ prefix }}{{ module_info.name }}View: {{ prefix }}{{ module_info.name }}ViewInput {
+	
+}
+
+
+// MARK: - UIViewController
+
+extension {{ prefix }}{{ module_info.name }}View {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        output?.eventViewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        output?.eventViewWillAppear()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        output?.eventViewDidAppear()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        output?.eventViewWillDisappear()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        output?.eventViewDidDisappear()
+    }
+}
