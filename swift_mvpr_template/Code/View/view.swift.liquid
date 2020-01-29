@@ -25,6 +25,7 @@ extension {{ prefix }}{{ module_info.name }}View: {{ prefix }}{{ module_info.nam
 extension {{ prefix }}{{ module_info.name }}View {
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
         output?.eventViewDidLoad()
     }
     
